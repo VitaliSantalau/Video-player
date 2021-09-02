@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="./assets/icons/favicon.ico" rel="icon" type="image/x-icon"/>
+  <title>Video player</title>
+</head>
+<body>
+  <main class="main">
+    <h1 class="visually-hidden">Video player App</h1>
+    <section class="section" id="video">
+      <h2 class="visually-hidden">Video player</h2>
+      <div class="container">
+        <div class="video-player">
+          <div class="fullscreen-container">
+            <div class="video-player-screen-container">
+              <video class="video-player-screen__video" poster="assets/video/poster0.jpg" >
+                <source src="assets/video/video0.mp4" type="video/mp4">
+              </video>
+              <button class="video-player-screen__play">
+                <svg width="100%" height="100%" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M110 8.89168C130.003 8.88778 149.558 14.816 166.191 25.9266C182.825 37.0372 195.79 52.831 203.446 71.3106C211.103 89.7901 213.107 110.125 209.206 129.744C205.304 149.363 195.672 167.384 181.528 181.528C167.384 195.672 149.363 205.304 129.744 209.206C110.125 213.107 89.7901 211.103 71.3106 203.446C52.8311 195.79 37.0372 182.825 25.9266 166.191C14.816 149.558 8.88783 130.003 8.89174 110C8.92833 83.1956 19.5925 57.4996 38.546 38.546C57.4996 19.5925 83.1956 8.92828 110 8.89168ZM110 0C88.2441 0 66.9767 6.45139 48.8873 18.5383C30.7979 30.6253 16.6989 47.805 8.37331 67.9048C0.0476618 88.0047 -2.1307 110.122 2.11367 131.46C6.35805 152.798 16.8345 172.398 32.2183 187.782C47.602 203.166 67.2022 213.642 88.5401 217.886C109.878 222.131 131.995 219.952 152.095 211.627C172.195 203.301 189.375 189.202 201.462 171.113C213.549 153.023 220 131.756 220 110C220 80.8262 208.411 52.8473 187.782 32.2183C167.153 11.5893 139.174 0 110 0Z"/>
+                  <path d="M167.954 110L76.5273 49.9121C76.6458 140.498 76.5273 96.05 76.5273 170.088L167.954 110Z" fill="white"/>
+                </svg>
+              </button>
+              <div class="speed-container"></div>
+            </div>
+            <div class="video-player-controls-container">
+              <button class="video-player-control__play video-player-control__button">
+                <svg width="100%" height="100%" viewBox="0 0 23 31" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.35 15.2417L0 0C0 22.971 0 11.6973 0 30.473L22.35 15.2417Z"/>
+                </svg>
+              </button>
+            <input 
+                class="video-player-control__progress-bar" 
+                type="range"
+                value="0" 
+                min="0" 
+                max="100" 
+                step="0.01" 
+              >
+              <button class="video-player-control__volume video-player-control__button">
+                <svg width="100%" height="100%" viewBox="0 0 38 31" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.8599 0L3.62988 10.7673V19.7057L17.8599 30.473C17.8299 7.502 17.8599 18.7757 17.8599 0Z"/>
+                  <path d="M0 22.6502H7.47V7.81152H0V22.6502Z"/>
+                  <path d="M27.0001 30.1114C26.656 30.1122 26.3194 30.0077 26.0329 29.8108C25.7463 29.6141 25.5226 29.3338 25.3901 29.0058C25.2994 28.786 25.2515 28.5497 25.2491 28.3108C25.2468 28.0718 25.29 27.8348 25.3764 27.613C25.4628 27.3914 25.5906 27.1895 25.7525 27.0189C25.9144 26.8483 26.1073 26.7123 26.3201 26.6187C27.7345 25.9992 29.0185 25.1006 30.1001 23.9734C32.3329 21.6528 33.5874 18.5141 33.5901 15.2417C33.5794 11.9649 32.3139 8.82568 30.0701 6.51006C28.9864 5.38276 27.7032 4.48118 26.2901 3.8544C25.8628 3.66542 25.5252 3.30945 25.351 2.86417C25.1767 2.41891 25.18 1.9205 25.3601 1.47773C25.4464 1.25676 25.5747 1.05598 25.7376 0.887299C25.9004 0.718622 26.0944 0.585501 26.3081 0.49585C26.5217 0.406199 26.7506 0.361849 26.9812 0.365436C27.2117 0.369024 27.4392 0.420474 27.6501 0.51673C31.342 2.14459 34.2783 5.18981 35.8401 9.01073C36.6453 10.9718 37.0602 13.0804 37.0601 15.2108C37.0591 17.3399 36.6478 19.4475 35.8501 21.4107C35.0771 23.3086 33.9527 25.0321 32.5401 26.4844C31.1476 27.9661 29.4859 29.1495 27.6501 29.9668C27.4454 30.0606 27.2241 30.1099 27.0001 30.1114Z"/>
+                  <path d="M23.6901 22.8162C23.3095 22.8156 22.9408 22.6792 22.6464 22.43C22.352 22.1808 22.15 21.8341 22.0747 21.4485C21.9993 21.063 22.0553 20.6625 22.2331 20.3148C22.4108 19.9671 22.6995 19.6934 23.0501 19.5405C23.8657 19.1823 24.5607 18.5833 25.0482 17.8187C25.5356 17.0539 25.7937 16.1575 25.7901 15.2418C25.7936 14.6207 25.6745 14.0053 25.4401 13.4335C25.2032 12.8782 24.8635 12.3762 24.4401 11.9558C24.0313 11.5206 23.5459 11.1699 23.0101 10.9225C22.6565 10.7185 22.3884 10.3866 22.2575 9.99059C22.1265 9.5946 22.142 9.16256 22.301 8.77766C22.4599 8.39277 22.751 8.08224 23.1182 7.90589C23.4855 7.72953 23.9029 7.69982 24.2901 7.82248C25.4626 8.34102 26.4951 9.14734 27.2978 10.1715C28.1006 11.1956 28.6494 12.4067 28.8967 13.6997C29.144 14.9926 29.0823 16.3284 28.7169 17.591C28.3516 18.8537 27.6936 20.0053 26.8001 20.9458C26.0943 21.6829 25.255 22.2692 24.3301 22.6715C24.1283 22.7637 23.9107 22.8129 23.6901 22.8162Z"/>
+                </svg>
+              </button>
+              <input 
+                class="video-player-control__volume-range" 
+                type="range"
+                value="0.4" 
+                min="0" 
+                max="1" 
+                step="0.1"
+              >
+              <button class="video-player-control__fullscreen video-player-control__button">
+                <svg width="100%" height="100%" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M30.606 30.7513H22.4102V34.8638H34.7088V22.5068H30.606V30.7513Z"/>
+                  <path d="M4.10278 22.5068H0V34.8638H12.2986V30.7513H4.10278V22.5068Z"/>
+                  <path d="M0 12.3569H4.10278V4.12222H12.2986V0H0V12.3569Z"/>
+                  <path d="M22.4102 0V4.12222H30.606V12.3569H34.7088V0H22.4102Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+          
+          <div class="video-player-carousel-container">
+            <div class="carousel">
+              <div class="carousel-slides-view">
+                <div class="carousel-slides-container">
+                  <div class="carousel__slide" value="0">
+                    <img src="assets/video/poster0.jpg" alt="poster">
+                  </div>
+                  <div class="carousel__slide" value="1">
+                    <img src="assets/video/poster1.jpg" alt="poster">
+                  </div>
+                  <div class="carousel__slide" value="2">
+                    <img src="assets/video/poster2.jpg" alt="poster">
+                  </div>
+                  <div class="carousel__slide" value="3">
+                    <img src="assets/video/poster3.jpg" alt="poster">
+                  </div>
+                  <div class="carousel__slide" value="4">
+                    <img src="assets/video/poster4.jpg" alt="poster">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-control-container">
+                <button class="carousel-control__left">
+                  <svg width="100%" height="100%" viewBox="0 0 10 12" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.4777 0.219168C5.87773 0.564178 5.94259 1.19347 5.62256 1.62473L2.37578 6.00004L5.62256 10.3753C5.94259 10.8066 5.87773 11.4359 5.4777 11.7809C5.07766 12.1259 4.49394 12.056 4.17391 11.6247L0 6.00004L4.17391 0.375342C4.49394 -0.0559202 5.07766 -0.125842 5.4777 0.219168ZM9.65184 0.219168C10.0519 0.564178 10.1167 1.19347 9.7967 1.62473L6.54992 6.00004L9.7967 10.3753C10.1167 10.8066 10.0519 11.4359 9.65184 11.7809C9.2518 12.1259 8.66808 12.056 8.34805 11.6247L4.17414 6.00004L8.34805 0.375342C8.66808 -0.0559202 9.2518 -0.125842 9.65184 0.219168Z"/>
+                  </svg>
+                </button>
+                <button class="carousel-control__right">
+                  <svg width="100%" height="100%" viewBox="0 0 10 12" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.348163 0.219168C0.748196 -0.125842 1.33192 -0.0559202 1.65195 0.375342L5.82586 6.00004L1.65194 11.6247C1.33192 12.056 0.748195 12.1259 0.348162 11.7809C-0.0518709 11.4359 -0.116729 10.8066 0.203297 10.3753L3.45008 6.00004L0.203298 1.62473C-0.116728 1.19347 -0.05187 0.564177 0.348163 0.219168ZM4.5223 0.219168C4.92234 -0.125841 5.50606 -0.0559197 5.82609 0.375342L10 6.00004L5.82609 11.6247C5.50606 12.056 4.92234 12.1259 4.5223 11.7809C4.12227 11.4359 4.05741 10.8066 4.37744 10.3753L7.62422 6.00004L4.37744 1.62473C4.05741 1.19347 4.12227 0.564178 4.5223 0.219168Z"/>
+                    </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js" type="module"></script>
+</body>
+</html>
